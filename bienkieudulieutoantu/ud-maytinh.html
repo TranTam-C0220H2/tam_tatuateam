@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+    <input type="text" id="number1">
+    <input type="text" id="number2">
+    <button id="add" onclick="calculator('+')">Addition(+)</button>
+    <button id="sub" onclick="calculator('-')">Subtraction(-)</button>
+    <button id="mul" onclick="calculator('*')">Multiplication(X)</button>
+    <button id="div" onclick="calculator('/')">Division(/)</button>
+    <div id="calculation"></div>
+    <script>
+            function calculator(operation) {
+                let number1 = parseFloat(document.getElementById("number1").value);
+                let number2 = parseFloat(document.getElementById("number2").value);
+                let result = 0;
+                switch (operation) {
+                    case '+':
+                        result = number1 + number2;
+                        break;
+                    case '-':
+                        result = number1 - number2;
+                        break;
+                    case '*':
+                        result = number1 * number2;
+                        break;
+                    case '/':
+                        result = number1 / number2;
+                        break;
+                }
+                document.getElementById("calculation").innerHTML = "Result Division: " + result;
+            }
+    </script>
+</body>
+</html>

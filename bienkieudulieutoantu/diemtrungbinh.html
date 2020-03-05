@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính điểm trung bình</title>
+</head>
+<body>
+    <script>
+        let physical = prompt('physical');
+            physical = Number.parseFloat(physical);
+        let chemistry = prompt('chemistry');
+            chemistry = Number.parseFloat(chemistry);
+        let maths = prompt('maths');
+            maths = Number.parseFloat(maths);
+        let total = physical + chemistry + maths;
+        total = Number.parseFloat(total);
+        let average = (physical + chemistry + maths)/3;
+        average = Number.parseFloat(average);
+        document.write('Tổng điểm 3 môn: '+total);
+        document.write('<br>');
+        document.write('Điểm trung bình 3 môn: '+average);
+    </script>
+</body>
+</html>

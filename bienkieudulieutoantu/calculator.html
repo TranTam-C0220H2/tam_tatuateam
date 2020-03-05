@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <div colspan="4"><div id="input"></div>
+        </tr>
+        <tr>
+            <td colspan="2"><button>C</button></td>
+            <td colspan="2"><button>Clear</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="setInput(1)" value="1">1</button></td>
+            <td><button onclick="setInput(2)" value="2">2</button></td>
+            <td><button onclick="setInput(3)" value="3">3</button></td>
+            <td><button onclick="setInput(/)" value="/">/</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="setInput(4)" value="4">4</button></td>
+            <td><button onclick="setInput(5)" value="5">5</button></td>
+            <td><button onclick="setInput(6)" value="6">6</button></td>
+            <td><button onclick="setInput(*)" value="*">*</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="setInput(7)" value="7">7</button></td>
+            <td><button onclick="setInput(8)" value="8">8</button></td>
+            <td><button onclick="setInput(9)" value="9">9</button></td>
+            <td><button onclick="setInput(-)" value="-">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="setInput(0)" value="0">0</button></td>
+            <td><button onclick="setInput(.)" value=".">.</button></td>
+            <td><button onclick="setInput(=)" value="=">=</button></td>
+            <td><button onclick="setInput(+)" value="+">+</button></td>
+        </tr>
+    </table>
+    <script>
+        function setInput(operation) {
+            let input = 0;
+            switch (operation) {
+                case 0:
+
+            }
+            document.getElementById(input).value;
+        }
+    </script>
+</body>
+</html>

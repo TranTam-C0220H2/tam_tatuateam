@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+            <h3>Amount</h3>
+            <input name="amount" id="MyAmount" type="text">
+            <h3>From Currency</h3>
+            <select name="fromCountry" id="MyFrom">
+                <option value="VN">VNĐ</option>
+                <option value="US">USD</option>
+                <option value="Ye">Yên</option>
+            </select>
+            <h3>To Currency</h3>
+            <select name="toCountry" id="MyTo">
+                <option value="VN">VNĐ</option>
+                <option value="US">USD</option>
+                <option value="Ye">Yên</option>
+            </select>
+        <br>
+        <button type="button" onclick="myChuyendoi()">Convert</button>
+    <div id="abcxyz"></div>
+<script>
+    function myChuyendoi() {
+        let x = parseFloat(document.getElementById("MyAmount").value);
+        let y = document.getElementById("MyFrom");
+        let z= document.getElementById("MyTo");
+        if (y.value === 'Ye'&& z.value === 'Ye') {
+               document.getElementById("abcxyz").innerHTML = "Result: "+x;
+        } else if (y.value === 'VN'&& z.value === 'VN') {
+            document.getElementById("abcxyz").innerHTML = "Result: " + x;
+        } else if (y.value === 'VN'&& z.value === 'US') {
+            document.getElementById("abcxyz").innerHTML = "Result: " + x / 25000;
+        } else if (y.value === 'VN'&& z.value === 'Ye') {
+            document.getElementById("abcxyz").innerHTML = "Result: " + x / 250;
+        } else if (y.value === 'US'&& z.value === 'VN') {
+            document.getElementById("abcxyz").innerHTML = "Result: " + x * 25000;
+        } else if (y.value === 'US'&& z.value === 'US') {
+            document.getElementById("abcxyz").innerHTML = "Result: " + x;
+        } else if (y.value === 'US'&& z.value === 'Ye') {
+            document.getElementById("abcxyz").innerHTML = "Result: " + x * 0.01;
+        } else if (y.value === 'Ye'&& z.value === 'VN') {
+            document.getElementById("abcxyz").innerHTML = "Result: " + x *250;
+        } else if (y.value === 'Ye'&& z.value === 'US') {
+            document.getElementById("abcxyz").innerHTML = "Result: " + x * 100;
+        }
+    }
+</script>
+</body>
+</html>
