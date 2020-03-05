@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tam giác</title>
+</head>
+<body>
+<button id="triangle" onclick="myTriangle()">Kiểm tra</button>
+<div id="test"></div>
+<div id="calculate"></div>
+<script>
+    function myTriangle() {
+        let a = parseFloat(prompt('Nhập a'));
+        let b = parseFloat(prompt('Nhập b'));
+        let c = parseFloat(prompt('Nhập c'));
+        let C, P, S;
+        if (isTriangle(a,b,c)) {
+            if (iseTriangle(a,b,c)) {
+                document.getElementById('test').innerHTML = 'Đây là tam giác đều';
+            } else if (isrTriangle(a,b,c)) {
+                document.getElementById('test').innerHTML = 'Đây là tam giác vuông';
+            } else if (isiTriangle(a,b,c)) {
+                document.getElementById('test').innerHTML = 'Đây là tam giác cân';
+            } else {
+                document.getElementById('test').innerHTML = 'Đây là tam giác thường';
+            }
+            document.getElementById('calculate').innerHTML = 'Chu vi ' + isPetimeter(a,b,c) + ' Diện tích ' + isAcreage(a,b,c);
+        } else {
+            document.getElementById('test').innerHTML = 'a, b, c không là 3 cạnh của tam giác';
+            document.getElementById('calculate').innerHTML = '';
+        }
+    }
+    function isTriangle(a,b,c) {
+        return (a + b) > c && (a + c) > b && (b + c) > a;
+    }
+    function isPetimeter(a,b,c) {
+        return C = a + b + c;
+    }
+    function isAcreage(a,b,c) {
+        P = C / 2;
+        return S = Math.sqrt(P * (P - a) * (P - b) * (P - c));
+    }
+    function isrTriangle(a,b,c) {
+        return (a * a) === (b * b + c * c) || (b * b) === (a * a + c * c) || (c * c) === (a * a + b * b);
+    }
+    function isiTriangle(a,b,c) {
+        return a === b || a === c || b === c;
+    }
+    function iseTriangle(a,b,c) {
+        return a === b && b === c;
+    }
+</script>
+</body>
+</html>
